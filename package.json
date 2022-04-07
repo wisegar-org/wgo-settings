@@ -1,6 +1,6 @@
 {
   "name": "@wisegar-org/wgo-settings",
-  "version": "0.0.1-build.4",
+  "version": "0.0.1-build.0",
   "description": "WGO Settings Module",
   "main": "build/index.js",
   "scripts": {
