@@ -1,7 +1,7 @@
 {
-  "name": "wgo-template-module",
+  "name": "@wisegar-org/wgo-settings",
   "version": "0.0.1-build.0",
-  "description": "WGO Module Template",
+  "description": "WGO Settings Module",
   "main": "build/index.js",
   "scripts": {
     "start": "nodemon",
@@ -19,7 +19,7 @@
     "nodejs",
     "typescript"
   ],
-  "author": "Wisegar.org Development Group",
+  "author": "Wisegar.org Development Group <info@wiseagr.org>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wisegar-org/wgo-template-module/issues"
