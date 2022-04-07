@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import { join } from 'path';
+import { IBaseEnv } from '../interfaces/IBaseEnv';
 import { IBaseSettings } from '../interfaces/IBaseSettings';
 import { defaultBaseSettings } from '../models/DefaultBaseSettings';
 
@@ -25,6 +26,10 @@ export const GetPortKey = () => {
 export const GetConfigFileName = () => {
   const nodeEnv = GetNodeEnvKey();
   return nodeEnv === 'production' ? './settings.json' : `./settings.${nodeEnv}.json`;
+};
+
+export const GetRunningEnv = <TEnv extends IBaseEnv>(): TEnv => {
+  return process.env as unknown as TEnv;
 };
 
 export const GetConfig = <TSettings extends IBaseSettings>(): TSettings => {
