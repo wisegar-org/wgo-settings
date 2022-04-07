@@ -1,1 +1,2 @@
-console.log("tsc added!");
+export * from './interfaces/IBaseSettings';
+export * from './services/SettingsService';
