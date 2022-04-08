@@ -1,7 +1,7 @@
 {
-  "name": "@wisegar-org/wgo-settings",
-  "version": "0.0.1-build.8",
-  "description": "WGO Settings Module",
+  "name": "@orionedp/quick-core",
+  "version": "0.0.1-build.0",
+  "description": "Quick Modulo Base Condiviso",
   "main": "build/index.js",
   "scripts": {
     "start": "nodemon",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wisegar-org/wgo-settings.git"
+    "url": "git+https://github.com/orionedp/quick-core.git"
   },
   "keywords": [
     "wisegar",
@@ -19,12 +19,12 @@
     "nodejs",
     "typescript"
   ],
-  "author": "Wisegar.org Development Group <info@wiseagr.org>",
-  "license": "MIT",
+  "author": "Yariel Rodriguez <yrodriguez@orionedp.ch>",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/wisegar-org/wgo-settings/issues"
+    "url": "https://github.com/orionedp/quick-core/issues"
   },
-  "homepage": "https://github.com/wisegar-org/wgo-settings#readme",
+  "homepage": "https://github.com/orionedp/quick-core#readme",
   "devDependencies": {
     "@types/jest": "27.4.1",
     "jest": "27.5.1",
@@ -33,7 +33,5 @@
     "ts-node": "10.7.0",
     "typescript": "4.6.3"
   },
-  "dependencies": {
-    "dotenv": "16.0.0"
-  }
+  "dependencies": {}
 }
