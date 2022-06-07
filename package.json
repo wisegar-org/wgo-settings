@@ -1,7 +1,7 @@
 {
-  "name": "@orionedp/quick-core",
-  "version": "0.0.1-build.0",
-  "description": "Quick Modulo Base Condiviso",
+  "name": "@wisegar-org/wgo-settings",
+  "version": "0.0.1-build.9",
+  "description": "WGO Settings Module",
   "main": "build/index.js",
   "scripts": {
     "start": "nodemon",
