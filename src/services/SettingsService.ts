@@ -32,8 +32,9 @@ export const GetRunningEnv = <TEnv extends IBaseEnv>(): TEnv => {
   return process.env as unknown as TEnv;
 };
 
-export const GetConfig = <TSettings extends IBaseSettings>(): TSettings => {
+export const GetConfig = <TSettings extends IBaseSettings>(defaultSettings?: TSettings): TSettings => {
   const fs = require('fs-extra');
+  const usedDefaultSettings = defaultSettings ? defaultSettings : defaultBaseSettings;
   const settingsPath = GetSettingsFolderPathKey();
   if (!fs.existsSync(settingsPath)) {
     console.error(`Settings path not found. Folder ${settingsPath} will be created!`);
@@ -43,7 +44,7 @@ export const GetConfig = <TSettings extends IBaseSettings>(): TSettings => {
   const configFilename = join(settingsPath, GetConfigFileName());
   if (!fs.existsSync(configFilename)) {
     console.error(`Settings file not found. File ${configFilename} will be created!`);
-    fs.writeJsonSync(configFilename, defaultBaseSettings);
+    fs.writeJsonSync(configFilename, usedDefaultSettings);
   }
 
   const settingsReadContent = fs.readFileSync(configFilename);
