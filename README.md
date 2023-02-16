@@ -1,1 +1,1 @@
-# quick-core
+# WGO Settings Module
