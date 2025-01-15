@@ -1,6 +1,6 @@
 {
-  "name": "wgo-settings",
-  "version": "0.0.1",
+  "name": "@wisegar-org/wgo-settings",
+  "version": "0.0.1-build.1",
   "description": "WGO Settings Module",
   "main": "build/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "nodejs",
     "typescript"
   ],
-  "author": "Wisegar Development Group <info@wiseagr.org>",
+  "author": "Wisegar Development Group <info@wisegar.org>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wisegar-org/wgo-settings/issues"
