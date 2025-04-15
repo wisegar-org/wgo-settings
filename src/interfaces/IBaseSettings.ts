@@ -3,8 +3,8 @@ export interface IBaseSettings {
   DB_NAME: string;
   DB_PASSWORD: string;
   DB_USERNAME: string;
-  DB_PORT: any;
-  DB_HOST: any;
+  DB_PORT: number;
+  DB_HOST: string;
   PRIVATE_KEY: string;
   PUBLIC_KEY: string;
   CYPHER_KEY: string;
@@ -12,10 +12,10 @@ export interface IBaseSettings {
   TOKEN_TIME_TO_EXPIRE: string;
   EMAIL_HOST: string;
   EMAIL_PORT: number;
-  EMAIL_LOG: string;
-  EMAIL_DEBUG: string;
-  EMAIL_SECURE: string;
-  EMAIL_SENDER_ANONYMOUS: string;
+  EMAIL_LOG: boolean;
+  EMAIL_DEBUG: boolean;
+  EMAIL_SECURE: boolean;
+  EMAIL_SENDER_ANONYMOUS: boolean;
   EMAIL_SENDER_ADDRESS: string;
   EMAIL_SENDER_ADDRESS_NAME: string;
   EMAIL_SENDER_PASSWORD: string;

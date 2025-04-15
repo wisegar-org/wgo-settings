@@ -110,7 +110,7 @@ export const GetDBHostKey = () => {
 
 export const GetDBPortKey = () => {
   const settings = GetConfig();
-  if (settings.DB_PORT === '') throw 'Impossible to get value from DB_PORT settings key';
+  if (!settings.DB_PORT || settings.DB_PORT <= 0) throw 'Impossible to get valid value from DB_PORT settings key';
   return settings.DB_PORT;
 };
 
@@ -150,30 +150,30 @@ export const GetEmailPortKey = () => {
 export const GetEmailLogKey = () => {
   if (process.env.EMAIL_LOG) return process.env.EMAIL_LOG === 'true';
   const settings = GetConfig();
-  if (!settings.EMAIL_LOG) throw 'Impossible to get value from EMAIL_LOG env variable and settings key';
-  return settings.EMAIL_LOG === 'true';
+  if (!settings.EMAIL_LOG) throw 'Impossible to get a valid value from EMAIL_LOG env variable and settings key';
+  return settings.EMAIL_LOG;
 };
 
 export const GetEmailDebugKey = () => {
   if (process.env.EMAIL_DEBUG) return process.env.EMAIL_DEBUG === 'true';
   const settings = GetConfig();
   if (!settings.EMAIL_DEBUG) throw 'Impossible to get value from EMAIL_DEBUG env variable and settings key';
-  return settings.EMAIL_DEBUG === 'true';
+  return settings.EMAIL_DEBUG;
 };
 
 export const GetEmailSecureKey = () => {
   if (process.env.EMAIL_SECURE) return process.env.EMAIL_SECURE === 'true';
   const settings = GetConfig();
   if (!settings.EMAIL_SECURE) throw 'Impossible to get value from EMAIL_SECURE env variable and settings key';
-  return settings.EMAIL_SECURE === 'true';
+  return settings.EMAIL_SECURE;
 };
 
 export const GetEmailSenderAnonymousKey = (): boolean => {
   if (process.env.EMAIL_SENDER_ANONYMOUS) return process.env.EMAIL_SENDER_ANONYMOUS === 'true';
   const settings = GetConfig();
-  if (!settings.EMAIL_SENDER_ANONYMOUS || settings.EMAIL_SENDER_ANONYMOUS === '')
+  if (!settings.EMAIL_SENDER_ANONYMOUS)
     throw 'Impossible to get value from EMAIL_SENDER_ANONYMOUS env variable and settings key';
-  return settings.EMAIL_SENDER_ANONYMOUS === 'true';
+  return settings.EMAIL_SENDER_ANONYMOUS;
 };
 
 export const GetEmailSenderKey = () => {
